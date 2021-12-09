@@ -7,7 +7,7 @@
     {
       "continuePipeline": false,
       "failPipeline": true,
-      "job": "opencloudcx-demo-app",
+      "job": "opencloudcx-demo-app-build",
       "master": "k8s-jenkins",
       "name": "Jenkins Build",
       "parameters": {},
@@ -19,14 +19,12 @@
       "account": "default",
       "app": "${jenkins_job_name}",
       "cloudProvider": "kubernetes",
-      "cluster": "deployment opencloudcx-demo-app",
       "completeOtherBranchesThenFail": false,
       "continuePipeline": true,
-      "criteria": "oldest",
       "failPipeline": false,
-      "kind": "deployment",
       "location": "default",
-      "mode": "dynamic",
+      "manifestName": "deployment opencloudcx-demo-app",
+      "mode": "static",
       "name": "Cleanup",
       "options": {
         "cascading": true
@@ -213,5 +211,5 @@
       "type": "git"
     }
   ],
-  "updateTs": "1639081741000"
+  "updateTs": "1639089251000"
 }
